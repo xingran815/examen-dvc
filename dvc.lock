@@ -96,3 +96,31 @@ stages:
       hash: md5
       md5: a64a8a4ad2b122239d5b9671a5623c9d
       size: 10747903
+  model_prediction_evaluation:
+    cmd: python src/models/evaluation.py
+    deps:
+    - path: data/processed_data/X_test_scale.csv
+      hash: md5
+      md5: f1bc8dcad72fc1170e4d23dabf5a2572
+      size: 71236
+    - path: data/processed_data/y_test.csv
+      hash: md5
+      md5: 5cad07a4cdc84c08abba8b40ce7c757b
+      size: 8184
+    - path: models/model.pkl
+      hash: md5
+      md5: a64a8a4ad2b122239d5b9671a5623c9d
+      size: 10747903
+    - path: src/models/evaluation.py
+      hash: md5
+      md5: 6a9f38d3e02c12b533ce40c059837f65
+      size: 2464
+    outs:
+    - path: data/processed_data/y_predict.csv
+      hash: md5
+      md5: fb9d186d491fffe1866d17345698ad7c
+      size: 8477
+    - path: metrics/scores.json
+      hash: md5
+      md5: 0689b7f557a8612092f5cdc65c37d4d0
+      size: 63
