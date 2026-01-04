@@ -52,3 +52,23 @@ stages:
       hash: md5
       md5: 9e494763c459497a7a7ed192145546b5
       size: 213205
+  best_parameters:
+    cmd: python src/models/best_param.py
+    deps:
+    - path: data/processed_data/X_train_scale.csv
+      hash: md5
+      md5: 9e494763c459497a7a7ed192145546b5
+      size: 213205
+    - path: data/processed_data/y_train.csv
+      hash: md5
+      md5: 3a6f35375756aa8918486251ec6ef015
+      size: 24223
+    - path: src/models/best_param.py
+      hash: md5
+      md5: 447f2077e0560b3916faaa5434148a1b
+      size: 2101
+    outs:
+    - path: models/best_params.pkl
+      hash: md5
+      md5: 437e4a1a7f9c2793f3ee0dbcf2196045
+      size: 68
