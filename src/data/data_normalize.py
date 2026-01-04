@@ -13,6 +13,7 @@ def data_normalize():
     X_test = pd.read_csv(INPUT_FILE)
 
     # normalize the X_train and X_test data
+    print("Normalize the training and testing input data...")
     scaler = StandardScaler()
     X_train_scale = pd.DataFrame(scaler.fit_transform(X_train),
                                  columns=X_train.columns)
@@ -20,6 +21,7 @@ def data_normalize():
                                 columns=X_test.columns)
 
     # output the normalized data
+    print("Saving the normalized data...")
     OUTPUT_FILE = os.path.join(THIS_DIR,
                                "../../data/processed_data/X_train_scale.csv")
     X_train_scale.to_csv(OUTPUT_FILE, index=False)

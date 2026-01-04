@@ -15,10 +15,12 @@ def split_data():
     X = df.drop(columns=["silica_concentrate"])
 
     # split the data into train and test sets
+    print("splitting the data set to training and testing...")
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.25, random_state=7
     )
 
+    print("saving the splitted data to csv files...")
     OUTPUT_FILE = os.path.join(THIS_DIR,
                                "../../data/processed_data/X_test.csv")
     X_test.to_csv(OUTPUT_FILE, index=False)

@@ -46,7 +46,7 @@ def training():
         return
     with open(param_file, 'rb') as f:
         best_params = pickle.load(f)
-    print(f"Best parameters found: {best_params}")
+    print(f"Using best parameters: {best_params}")
 
     # Train the model
     model = RandomForestRegressor(**best_params, random_state=42)
