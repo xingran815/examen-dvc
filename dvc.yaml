@@ -26,3 +26,12 @@ stages:
     - src/models/best_param.py
     outs:
     - models/best_params.pkl
+  model_training:
+    cmd: python src/models/training.py
+    deps:
+    - data/processed_data/X_train_scale.csv
+    - data/processed_data/y_train.csv
+    - models/best_params.pkl
+    - src/models/training.py
+    outs:
+    - models/model.pkl
