@@ -19,13 +19,17 @@ def split_data():
         X, y, test_size=0.25, random_state=7
     )
 
-    OUTPUT_FILE = os.path.join(THIS_DIR, "../../data/processed_data/X_test.csv")
+    OUTPUT_FILE = os.path.join(THIS_DIR,
+                               "../../data/processed_data/X_test.csv")
     X_test.to_csv(OUTPUT_FILE, index=False)
-    OUTPUT_FILE = os.path.join(THIS_DIR, "../../data/processed_data/y_test.csv")
+    OUTPUT_FILE = os.path.join(THIS_DIR,
+                               "../../data/processed_data/y_test.csv")
     y_test.to_csv(OUTPUT_FILE, index=False)
-    OUTPUT_FILE = os.path.join(THIS_DIR, "../../data/processed_data/X_train.csv")
+    OUTPUT_FILE = os.path.join(THIS_DIR,
+                               "../../data/processed_data/X_train.csv")
     X_train.to_csv(OUTPUT_FILE, index=False)
-    OUTPUT_FILE = os.path.join(THIS_DIR, "../../data/processed_data/y_train.csv")
+    OUTPUT_FILE = os.path.join(THIS_DIR,
+                               "../../data/processed_data/y_train.csv")
     y_train.to_csv(OUTPUT_FILE, index=False)
 
 
